@@ -1,0 +1,318 @@
+/* =========================================================
+   JORDAN PLUS PHARMACEUTICAL — Design tokens
+   Base:      #F4FBF7 (mint white)
+   Ink:       #0F3D2E (deep forest green)
+   Green:     #1E7A4C (brand)
+   Green Dk:  #145C39
+   Lime:      #8DC63F (accent)
+   Navy:      #123C55 (corporate contrast)
+   Card:      #FFFFFF
+========================================================= */
+:root{
+  --jp-base:      #F4FBF7;
+  --jp-ink:       #0F3D2E;
+  --jp-green:     #1E7A4C;
+  --jp-green-dk:  #145C39;
+  --jp-lime:      #8DC63F;
+  --jp-navy:      #123C55;
+  --jp-card:      #FFFFFF;
+  --jp-line:      #DCEBE1;
+  --jp-font-display: "Space Grotesk", sans-serif;
+  --jp-font-body: "Inter", sans-serif;
+  --jp-radius: 18px;
+}
+
+*{ box-sizing:border-box; }
+html{ scroll-behavior:smooth; }
+
+body{
+  background:var(--jp-base);
+  color:var(--jp-ink);
+  font-family:var(--jp-font-body);
+  font-size:16px;
+  line-height:1.6;
+}
+
+h1,h2,h3,h4,.jp-brand{
+  font-family:var(--jp-font-display);
+  color:var(--jp-ink);
+  font-weight:600;
+}
+
+a{ color:var(--jp-green-dk); text-decoration:none; }
+a:hover{ color:var(--jp-green); }
+::selection{ background:var(--jp-lime); color:var(--jp-ink); }
+
+@media (prefers-reduced-motion: reduce){
+  *{ animation:none !important; transition:none !important; }
+}
+
+/* ---------- Buttons ---------- */
+.btn-jp{
+  background:var(--jp-green);
+  border:2px solid var(--jp-green);
+  color:#fff;
+  font-weight:600;
+  border-radius:10px;
+  padding:.6rem 1.4rem;
+  transition:transform .15s ease, background .15s ease;
+}
+.btn-jp:hover, .btn-jp:focus{
+  background:var(--jp-green-dk);
+  border-color:var(--jp-green-dk);
+  color:#fff;
+  transform:translateY(-1px);
+}
+.btn-outline-jp{
+  background:transparent;
+  border:2px solid var(--jp-ink);
+  color:var(--jp-ink);
+  font-weight:600;
+  border-radius:10px;
+  padding:.6rem 1.4rem;
+  transition:transform .15s ease, background .15s ease, color .15s ease;
+}
+.btn-outline-jp:hover{
+  background:var(--jp-ink);
+  color:var(--jp-base);
+  transform:translateY(-1px);
+}
+:focus-visible{ outline:3px solid var(--jp-lime); outline-offset:2px; }
+
+/* ---------- Navbar ---------- */
+.jp-navbar{
+  background:rgba(244,251,247,.94);
+  backdrop-filter:blur(6px);
+  border-bottom:1px solid var(--jp-line);
+  padding:.6rem 0;
+}
+.jp-brand{ font-size:1.2rem; display:flex; align-items:center; gap:.5rem; color:var(--jp-ink); }
+.jp-brand em{ font-style:normal; color:var(--jp-green); }
+.jp-logo-mark{ width:34px; height:34px; }
+.jp-nav-links .nav-link{
+  color:var(--jp-ink);
+  font-weight:500;
+  margin:0 .5rem;
+  position:relative;
+}
+.jp-nav-links .nav-link::after{
+  content:"";
+  position:absolute; left:0; bottom:-2px;
+  width:0; height:2px; background:var(--jp-green);
+  transition:width .2s ease;
+}
+.jp-nav-links .nav-link:hover::after{ width:100%; }
+
+/* ---------- Hero ---------- */
+.jp-hero{
+  position:relative;
+  padding:5rem 0 4rem;
+  background:
+    radial-gradient(circle at 85% -10%, rgba(141,198,63,.18), transparent 45%),
+    radial-gradient(circle at -5% 110%, rgba(30,122,76,.12), transparent 45%);
+}
+.jp-eyebrow{
+  color:var(--jp-green-dk);
+  font-weight:600;
+  letter-spacing:.02em;
+  margin-bottom:.4rem;
+}
+.jp-hero-title{
+  font-size:clamp(2.3rem, 4.6vw, 3.4rem);
+  line-height:1.1;
+  margin-bottom:1.2rem;
+}
+.jp-hero-title-accent{ color:var(--jp-green); }
+.jp-hero-sub{ max-width:540px; color:#3f5a4d; font-size:1.03rem; }
+
+.jp-hero-stats div{ display:flex; flex-direction:column; }
+.jp-hero-stats strong{ font-size:1.2rem; font-family:var(--jp-font-display); }
+.jp-hero-stats span{ font-size:.82rem; color:#5b7568; }
+
+.jp-hero-card{
+  background:var(--jp-card);
+  border-radius:var(--jp-radius);
+  padding:2rem;
+  text-align:center;
+  box-shadow:0 20px 40px -20px rgba(15,61,46,.25);
+  border:1px solid var(--jp-line);
+}
+.jp-hero-card-icon{ font-size:2.6rem; color:var(--jp-green); }
+.jp-hero-card-title{ color:#5b7568; font-size:.8rem; text-transform:uppercase; letter-spacing:.06em; margin:.4rem 0 .2rem;}
+.jp-hero-card-name{ font-family:var(--jp-font-display); font-size:1.2rem; margin-bottom:.2rem; }
+.jp-hero-card-price{ color:var(--jp-green-dk); font-weight:700; font-size:1rem; }
+.jp-hero-card-price span{ color:#5b7568; font-weight:400; font-size:.82rem; }
+
+/* ---------- Features strip ---------- */
+.jp-strip{ background:var(--jp-ink); color:var(--jp-base); padding:3.2rem 0; }
+.jp-strip h3{ color:var(--jp-base); font-size:1.1rem; }
+.jp-strip p{ color:#c3d9cd; font-size:.9rem; max-width:320px; margin:0 auto; }
+.jp-strip-icon{ font-size:2rem; margin-bottom:.6rem; color:var(--jp-lime); }
+
+/* ---------- Sections ---------- */
+.jp-section{ padding:5rem 0; }
+.jp-section-alt{ background:#EAF5EE; }
+.jp-section-head{ text-align:center; margin-bottom:2.4rem; }
+.jp-section-head h2{ font-size:clamp(1.8rem,3vw,2.4rem); }
+
+/* ---------- About / CEO ---------- */
+.jp-ceo-card{
+  background:var(--jp-card);
+  border:1px solid var(--jp-line);
+  border-radius:var(--jp-radius);
+  padding:1.6rem;
+  text-align:center;
+}
+.jp-ceo-photo{
+  width:100%;
+  max-width:280px;
+  aspect-ratio:1/1;
+  object-fit:cover;
+  border-radius:16px;
+  margin:0 auto 1rem;
+  display:block;
+  border:3px solid var(--jp-green);
+}
+.jp-ceo-name{ font-family:var(--jp-font-display); font-size:1.25rem; margin-bottom:.1rem; }
+.jp-ceo-title{ color:var(--jp-green-dk); font-weight:600; font-size:.9rem; }
+.jp-about-text{ color:#3f5a4d; max-width:600px; }
+.jp-about-point{
+  display:flex; align-items:center; gap:.5rem;
+  font-weight:500; font-size:.92rem;
+  background:var(--jp-card);
+  border:1px solid var(--jp-line);
+  border-radius:10px;
+  padding:.6rem .8rem;
+}
+.jp-about-point i{ color:var(--jp-green); }
+
+/* ---------- Catalog tabs & cards ---------- */
+.jp-tabs{ border-bottom:none; gap:.4rem; }
+.jp-tabs .nav-link{
+  border:2px solid var(--jp-line);
+  border-radius:10px;
+  color:var(--jp-ink);
+  font-weight:600;
+  padding:.5rem 1.2rem;
+  background:var(--jp-card);
+  font-size:.9rem;
+}
+.jp-tabs .nav-link.active{
+  background:var(--jp-ink);
+  color:var(--jp-base);
+  border-color:var(--jp-ink);
+}
+
+.jp-item-card{
+  background:var(--jp-card);
+  border:1px solid var(--jp-line);
+  border-radius:var(--jp-radius);
+  padding:1.3rem;
+  height:100%;
+  display:flex;
+  flex-direction:column;
+  transition:transform .15s ease, box-shadow .15s ease;
+}
+.jp-item-card:hover{ transform:translateY(-4px); box-shadow:0 16px 28px -18px rgba(15,61,46,.3); }
+.jp-item-icon{ font-size:1.8rem; color:var(--jp-green); margin-bottom:.4rem; }
+.jp-item-name{ font-family:var(--jp-font-display); font-size:1.05rem; margin-bottom:.2rem; }
+.jp-item-desc{ color:#5b7568; font-size:.85rem; }
+.jp-item-prices{ font-size:.82rem; color:#3f5a4d; margin:.5rem 0; }
+.jp-item-prices div{ display:flex; justify-content:space-between; padding:.15rem 0; border-bottom:1px dashed var(--jp-line); }
+.jp-item-prices strong{ color:var(--jp-green-dk); }
+.jp-item-footer{ margin-top:auto; display:flex; gap:.5rem; align-items:center; }
+.jp-item-footer select{
+  border-radius:8px; border:1px solid var(--jp-line); padding:.35rem .5rem; font-size:.82rem; flex:1;
+}
+.jp-add-btn{ font-size:.82rem; padding:.4rem .9rem; white-space:nowrap; }
+
+/* ---------- Order (React) ---------- */
+.jp-cart{
+  background:var(--jp-card);
+  border-radius:var(--jp-radius);
+  border:1px solid var(--jp-line);
+  padding:1.6rem;
+  height:100%;
+}
+.jp-cart h3{ font-size:1.1rem; margin-bottom:1rem; }
+.jp-cart-row{
+  display:flex; align-items:center; justify-content:space-between;
+  padding:.55rem 0; border-bottom:1px dashed var(--jp-line);
+  gap:.5rem; font-size:.9rem;
+}
+.jp-cart-name{ font-weight:600; }
+.jp-cart-sub{ color:#5b7568; font-size:.78rem; }
+.jp-cart-qty{ display:flex; align-items:center; gap:.4rem; }
+.jp-cart-qty button{
+  width:24px; height:24px; border-radius:50%;
+  border:1px solid var(--jp-line); background:var(--jp-base);
+  line-height:1; font-weight:700;
+}
+.jp-cart-remove{ color:#c0392b; background:none; border:none; font-size:.8rem; }
+.jp-cart-total{ border-top:2px solid var(--jp-ink); padding-top:.8rem; font-size:1.05rem; margin-top:.6rem; }
+.jp-react-badge{
+  display:inline-flex; align-items:center; gap:.3rem;
+  background:#e7f6fb; color:#0e6ba8; border-radius:100px;
+  font-size:.72rem; font-weight:700; padding:.15rem .6rem; margin-bottom:.6rem;
+}
+
+.jp-form label{ font-weight:500; font-size:.88rem; }
+.jp-form .form-control, .jp-form .form-select{
+  border-radius:10px;
+  border:1px solid var(--jp-line);
+  padding:.55rem .75rem;
+}
+.jp-form .form-control:focus, .jp-form .form-select:focus{
+  border-color:var(--jp-green);
+  box-shadow:0 0 0 3px rgba(30,122,76,.15);
+}
+
+/* ---------- Reviews ---------- */
+.jp-review-card{
+  background:var(--jp-card);
+  border:1px solid var(--jp-line);
+  border-radius:16px;
+  padding:1.2rem 1.4rem;
+}
+.jp-review-top{ display:flex; justify-content:space-between; align-items:center; margin-bottom:.3rem; }
+.jp-review-name{ font-weight:600; }
+.jp-review-stars{ color:var(--jp-green-dk); font-size:.85rem; }
+.jp-review-text{ color:#3f5a4d; margin:0; font-size:.94rem; }
+.jp-review-date{ color:#8ea698; font-size:.75rem; }
+
+.jp-review-form-card{
+  background:var(--jp-ink);
+  color:var(--jp-base);
+  border-radius:var(--jp-radius);
+  padding:1.8rem;
+}
+.jp-review-form-card h3{ color:var(--jp-base); }
+.jp-review-form-card label{ color:var(--jp-base); }
+.jp-star-input{ font-size:1.5rem; color:#3f5a4d; cursor:pointer; }
+.jp-star-input i{ margin-right:.2rem; transition:color .1s ease; }
+.jp-star-input i.active{ color:var(--jp-lime); }
+
+/* ---------- Footer ---------- */
+.jp-footer{ background:var(--jp-ink); color:#d6e6dc; padding:4rem 0 1.6rem; }
+.jp-footer h4{ color:var(--jp-base); font-size:1rem; margin-bottom:1rem; }
+.jp-footer-brand{ color:var(--jp-base); }
+.jp-footer-brand em{ color:var(--jp-lime); }
+.jp-contact-list li{ margin-bottom:.6rem; display:flex; gap:.5rem; align-items:center; }
+.jp-contact-list a{ color:#d6e6dc; }
+.jp-contact-list a:hover{ color:var(--jp-lime); }
+.jp-social{
+  width:38px; height:38px; border-radius:50%;
+  border:1px solid #2c5443; color:var(--jp-base);
+  display:flex; align-items:center; justify-content:center;
+  transition:background .15s ease;
+}
+.jp-social:hover{ background:var(--jp-green); border-color:var(--jp-green); color:#fff; }
+.jp-footer-rule{ border-color:#1e4636; margin-top:2.5rem; }
+.jp-footer .form-control{ border-radius:10px; }
+
+/* ---------- Modals ---------- */
+.jp-modal{ border-radius:20px; border:none; }
+.jp-confirm-icon{ font-size:3rem; color:var(--jp-green); }
+
+/* ---------- Misc ---------- */
+.jp-toast{ border-radius:12px; }

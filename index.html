@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jordan Plus Pharmaceutical — Bulk &amp; Retail Drug Supply</title>
+<meta name="description" content="Jordan Plus Pharmaceutical — licensed pharmaceutical distributor. Browse our drug catalog, order by tablet, roll or carton, and get bulk B2B pricing.">
+
+<!-- Bootstrap 5 -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+<link rel="icon" type="image/svg+xml" href="assets/logo.svg">
+</head>
+<body>
+
+<!-- ================= NAVBAR ================= -->
+<nav class="navbar navbar-expand-lg sticky-top jp-navbar">
+  <div class="container">
+    <a class="navbar-brand jp-brand" href="#home">
+      <img src="assets/logo.svg" alt="Jordan Plus Pharmaceutical logo" class="jp-logo-mark">
+      <span>Jordan Plus <em>Pharmaceutical</em></span>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#jpNav" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="jpNav">
+      <ul class="navbar-nav mx-auto jp-nav-links">
+        <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="#catalog">Drugs</a></li>
+        <li class="nav-item"><a class="nav-link" href="#order">Order</a></li>
+        <li class="nav-item"><a class="nav-link" href="#reviews">Reviews</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+      </ul>
+      <div class="d-flex gap-2 jp-auth-buttons">
+        <span id="jpWelcome" class="d-none align-self-center small me-1"></span>
+        <button id="jpLoginBtn" class="btn btn-outline-jp btn-sm" data-bs-toggle="modal" data-bs-target="#loginModal">Log in</button>
+        <button id="jpSignupBtn" class="btn btn-jp btn-sm" data-bs-toggle="modal" data-bs-target="#signupModal">Create account</button>
+        <button id="jpLogoutBtn" class="btn btn-outline-jp btn-sm d-none">Log out</button>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- ================= HERO ================= -->
+<header id="home" class="jp-hero">
+  <div class="container jp-hero-inner">
+    <div class="row align-items-center gy-5">
+      <div class="col-lg-7">
+        <p class="jp-eyebrow">Wholesale &amp; retail pharmaceutical supply</p>
+        <h1 class="jp-hero-title">Verified drugs.<br>Bulk pricing.<br><span class="jp-hero-title-accent">Delivered on schedule.</span></h1>
+        <p class="jp-hero-sub">Jordan Plus Pharmaceutical supplies pharmacies, clinics and hospitals with tablets, syrups and medical consumables — priced per tablet, per roll or per carton, whichever way you buy.</p>
+        <div class="d-flex flex-wrap gap-3 mt-4">
+          <a href="#catalog" class="btn btn-jp btn-lg">Browse the catalog</a>
+          <a href="#order" class="btn btn-outline-jp btn-lg">Request bulk pricing</a>
+        </div>
+        <div class="jp-hero-stats d-flex flex-wrap gap-4 mt-5">
+          <div><strong>Verified</strong><span>stock only</span></div>
+          <div><strong>Carton, roll</strong><span>or tablet pricing</span></div>
+          <div><strong>Nationwide</strong><span>dispatch</span></div>
+        </div>
+      </div>
+      <div class="col-lg-5">
+        <div class="jp-hero-card">
+          <div class="jp-hero-card-icon"><i class="bi bi-capsule"></i></div>
+          <p class="jp-hero-card-title">Fast quote</p>
+          <p class="jp-hero-card-name">Amoxicillin 500mg Capsules</p>
+          <p class="jp-hero-card-price">₦350 <span>/ pack</span> · ₦30,000 <span>/ carton</span></p>
+          <button class="btn btn-jp w-100 mt-2 jp-quick-add"
+            data-name="Amoxicillin 500mg Capsules" data-tablet="350" data-roll="" data-carton="30000">
+            Add to order
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ================= FEATURES STRIP ================= -->
+<section class="jp-strip">
+  <div class="container">
+    <div class="row text-center gy-4">
+      <div class="col-md-4">
+        <div class="jp-strip-icon"><i class="bi bi-patch-check-fill"></i></div>
+        <h3>Verified &amp; licensed stock</h3>
+        <p>Every product is sourced from registered manufacturers and stored under proper conditions.</p>
+      </div>
+      <div class="col-md-4">
+        <div class="jp-strip-icon"><i class="bi bi-truck"></i></div>
+        <h3>Bulk &amp; nationwide delivery</h3>
+        <p>Order by the tablet for a small chemist or by the carton for a hospital pharmacy — we scale to you.</p>
+      </div>
+      <div class="col-md-4">
+        <div class="jp-strip-icon"><i class="bi bi-headset"></i></div>
+        <h3>A dedicated account contact</h3>
+        <p>Reach a real person on WhatsApp or email for stock checks, invoices and repeat orders.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= ABOUT / CEO ================= -->
+<section id="about" class="jp-section">
+  <div class="container">
+    <div class="row align-items-center gy-5">
+      <div class="col-lg-5">
+        <div class="jp-ceo-card">
+          <img src="assets/ceo.png" alt="Joda Stephen Adedeji, CEO of Jordan Plus Pharmaceutical" class="jp-ceo-photo">
+          <p class="jp-ceo-name">Joda Stephen Adedeji</p>
+          <p class="jp-ceo-title">Chief Executive Officer</p>
+        </div>
+      </div>
+      <div class="col-lg-7">
+        <p class="jp-eyebrow">Who we are</p>
+        <h2>Built on stock you can trust</h2>
+        <p class="jp-about-text">Jordan Plus Pharmaceutical is a pharmaceutical distribution company based in Koan, supplying pharmacies, clinics and hospitals with medicines and medical consumables at wholesale and retail pricing. Under the leadership of CEO Joda Stephen Adedeji, the company focuses on dependable stock, transparent pricing and orders that arrive when they're promised.</p>
+        <div class="row g-3 mt-2">
+          <div class="col-sm-6">
+            <div class="jp-about-point"><i class="bi bi-geo-alt-fill"></i> Based in Koan</div>
+          </div>
+          <div class="col-sm-6">
+            <div class="jp-about-point"><i class="bi bi-box-seam"></i> Tablet, roll &amp; carton pricing</div>
+          </div>
+          <div class="col-sm-6">
+            <div class="jp-about-point"><i class="bi bi-whatsapp"></i> Orders confirmed on WhatsApp</div>
+          </div>
+          <div class="col-sm-6">
+            <div class="jp-about-point"><i class="bi bi-shield-check"></i> Licensed &amp; verified supply</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CATALOG ================= -->
+<section id="catalog" class="jp-section jp-section-alt">
+  <div class="container">
+    <div class="jp-section-head">
+      <p class="jp-eyebrow">Full catalog</p>
+      <h2>Drugs &amp; medical supplies</h2>
+      <p class="text-muted">Choose your unit — tablet/pack, roll or carton — before adding to your order.</p>
+    </div>
+
+    <ul class="nav jp-tabs justify-content-center flex-wrap" id="catalogTabs" role="tablist">
+      <li class="nav-item" role="presentation">
+        <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#pane-analgesics" type="button">Pain Relief</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" data-bs-toggle="tab" data-bs-target="#pane-antibiotics" type="button">Antibiotics</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" data-bs-toggle="tab" data-bs-target="#pane-antimalarials" type="button">Antimalarials</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" data-bs-toggle="tab" data-bs-target="#pane-vitamins" type="button">Vitamins</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" data-bs-toggle="tab" data-bs-target="#pane-supplies" type="button">Medical Supplies</button>
+      </li>
+    </ul>
+
+    <div class="tab-content mt-4" id="catalogTabContent">
+      <div class="tab-pane fade show active row g-4" id="pane-analgesics" role="tabpanel"></div>
+      <div class="tab-pane fade row g-4" id="pane-antibiotics" role="tabpanel"></div>
+      <div class="tab-pane fade row g-4" id="pane-antimalarials" role="tabpanel"></div>
+      <div class="tab-pane fade row g-4" id="pane-vitamins" role="tabpanel"></div>
+      <div class="tab-pane fade row g-4" id="pane-supplies" role="tabpanel"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= ORDER (React powered) ================= -->
+<section id="order" class="jp-section">
+  <div class="container">
+    <div class="jp-section-head">
+      <p class="jp-eyebrow">Ready to stock up?</p>
+      <h2>Place a bulk order</h2>
+      <p class="text-muted">This part of the page runs on React — the cart and totals update live as you type.</p>
+    </div>
+    <div id="jpOrderRoot"></div>
+  </div>
+</section>
+
+<!-- ================= REVIEWS ================= -->
+<section id="reviews" class="jp-section jp-section-alt">
+  <div class="container">
+    <div class="jp-section-head">
+      <p class="jp-eyebrow">Trusted by pharmacies &amp; clinics</p>
+      <h2>What partners say</h2>
+    </div>
+
+    <div class="row g-4">
+      <div class="col-lg-7">
+        <div id="reviewsList" class="d-flex flex-column gap-3"></div>
+      </div>
+      <div class="col-lg-5">
+        <div class="jp-review-form-card">
+          <h3>Leave a review</h3>
+          <form id="reviewForm" class="jp-form needs-validation" novalidate>
+            <div class="mb-3">
+              <label class="form-label" for="revName">Your name / pharmacy</label>
+              <input type="text" class="form-control" id="revName" required>
+              <div class="invalid-feedback">Let us know who's talking.</div>
+            </div>
+            <div class="mb-3">
+              <label class="form-label d-block">Rating</label>
+              <div class="jp-star-input" id="revStars" data-rating="5">
+                <i class="bi bi-star-fill" data-val="1"></i>
+                <i class="bi bi-star-fill" data-val="2"></i>
+                <i class="bi bi-star-fill" data-val="3"></i>
+                <i class="bi bi-star-fill" data-val="4"></i>
+                <i class="bi bi-star-fill" data-val="5"></i>
+              </div>
+            </div>
+            <div class="mb-3">
+              <label class="form-label" for="revText">Your review</label>
+              <textarea class="form-control" id="revText" rows="3" required></textarea>
+              <div class="invalid-feedback">Tell other buyers what you thought.</div>
+            </div>
+            <button type="submit" class="btn btn-jp w-100">Post review</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CONTACT / FOOTER ================= -->
+<footer id="contact" class="jp-footer">
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-lg-4">
+        <a class="jp-brand jp-footer-brand" href="#home">
+          <img src="assets/logo.svg" alt="Jordan Plus Pharmaceutical logo" class="jp-logo-mark">
+          <span>Jordan Plus <em>Pharmaceutical</em></span>
+        </a>
+        <p class="text-muted mt-2">Wholesale and retail pharmaceutical supply, based in Koan. Led by CEO Joda Stephen Adedeji.</p>
+        <div class="d-flex gap-2 mt-3">
+          <a class="jp-social" href="https://wa.me/2348035905191" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="bi bi-whatsapp"></i></a>
+          <a class="jp-social" href="mailto:jodaadedejio1@gmail.com" aria-label="Email"><i class="bi bi-envelope-fill"></i></a>
+          <a class="jp-social" href="tel:+2348035905191" aria-label="Call"><i class="bi bi-telephone-fill"></i></a>
+        </div>
+      </div>
+
+      <div class="col-lg-4">
+        <h4>Get in touch</h4>
+        <ul class="list-unstyled jp-contact-list">
+          <li><i class="bi bi-telephone"></i> <a href="tel:+2348035905191">0803 590 5191</a></li>
+          <li><i class="bi bi-whatsapp"></i> <a href="https://wa.me/2348035905191" target="_blank" rel="noopener">Chat on WhatsApp</a></li>
+          <li><i class="bi bi-envelope"></i> <a href="mailto:jodaadedejio1@gmail.com">jodaadedejio1@gmail.com</a></li>
+          <li><i class="bi bi-geo-alt"></i> Koan</li>
+          <li><i class="bi bi-person-badge"></i> CEO: Joda Stephen Adedeji</li>
+        </ul>
+      </div>
+
+      <div class="col-lg-4">
+        <h4>Quick message</h4>
+        <form id="contactForm" class="jp-form needs-validation" novalidate>
+          <div class="mb-2">
+            <input type="text" class="form-control" id="cName" placeholder="Name" required>
+            <div class="invalid-feedback">Name please.</div>
+          </div>
+          <div class="mb-2">
+            <input type="email" class="form-control" id="cEmail" placeholder="Email" required>
+            <div class="invalid-feedback">Valid email please.</div>
+          </div>
+          <div class="mb-2">
+            <textarea class="form-control" id="cMessage" rows="2" placeholder="Message" required></textarea>
+            <div class="invalid-feedback">Say something!</div>
+          </div>
+          <button class="btn btn-jp w-100" type="submit">Send message</button>
+        </form>
+      </div>
+    </div>
+
+    <hr class="jp-footer-rule">
+    <p class="text-center text-muted small mb-0">© <span id="yr"></span> Jordan Plus Pharmaceutical. All medicines sold subject to applicable regulation.</p>
+  </div>
+</footer>
+
+<!-- ================= TOAST ================= -->
+<div class="toast-container position-fixed bottom-0 end-0 p-3" id="toastHost"></div>
+
+<!-- ================= LOGIN MODAL ================= -->
+<div class="modal fade" id="loginModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content jp-modal">
+      <div class="modal-header border-0">
+        <h5 class="modal-title">Welcome back</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <form id="loginForm" class="jp-form needs-validation" novalidate>
+          <div class="mb-3">
+            <label class="form-label" for="loginEmail">Email</label>
+            <input type="email" class="form-control" id="loginEmail" required>
+            <div class="invalid-feedback">Enter the email you signed up with.</div>
+          </div>
+          <div class="mb-3">
+            <label class="form-label" for="loginPassword">Password</label>
+            <input type="password" class="form-control" id="loginPassword" required minlength="4">
+            <div class="invalid-feedback">Password must be at least 4 characters.</div>
+          </div>
+          <button type="submit" class="btn btn-jp w-100">Log in</button>
+          <p class="text-center small text-muted mt-3 mb-0">No account yet?
+            <a href="#" data-bs-toggle="modal" data-bs-target="#signupModal" data-bs-dismiss="modal">Create one</a>
+          </p>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ================= SIGNUP MODAL ================= -->
+<div class="modal fade" id="signupModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content jp-modal">
+      <div class="modal-header border-0">
+        <h5 class="modal-title">Create a B2B account</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <form id="signupForm" class="jp-form needs-validation" novalidate>
+          <div class="mb-3">
+            <label class="form-label" for="suBusiness">Pharmacy / business name</label>
+            <input type="text" class="form-control" id="suBusiness" required>
+            <div class="invalid-feedback">Tell us your business name.</div>
+          </div>
+          <div class="mb-3">
+            <label class="form-label" for="suName">Contact person</label>
+            <input type="text" class="form-control" id="suName" required>
+            <div class="invalid-feedback">Who should we ask for?</div>
+          </div>
+          <div class="mb-3">
+            <label class="form-label" for="suEmail">Email</label>
+            <input type="email" class="form-control" id="suEmail" required>
+            <div class="invalid-feedback">A valid email is required.</div>
+          </div>
+          <div class="mb-3">
+            <label class="form-label" for="suPhone">Phone</label>
+            <input type="tel" class="form-control" id="suPhone" required>
+            <div class="invalid-feedback">Add a phone number.</div>
+          </div>
+          <div class="mb-3">
+            <label class="form-label" for="suPassword">Password</label>
+            <input type="password" class="form-control" id="suPassword" required minlength="4">
+            <div class="invalid-feedback">At least 4 characters.</div>
+          </div>
+          <div class="mb-3 form-check">
+            <input class="form-check-input" type="checkbox" id="suTerms" required>
+            <label class="form-check-label small" for="suTerms">I confirm I'm ordering on behalf of a licensed pharmacy, clinic or hospital.</label>
+            <div class="invalid-feedback">Please confirm to continue.</div>
+          </div>
+          <button type="submit" class="btn btn-jp w-100">Create account</button>
+          <p class="text-center small text-muted mt-3 mb-0">Already have one?
+            <a href="#" data-bs-toggle="modal" data-bs-target="#loginModal" data-bs-dismiss="modal">Log in</a>
+          </p>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ================= ORDER CONFIRMATION MODAL ================= -->
+<div class="modal fade" id="confirmModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content jp-modal text-center">
+      <div class="modal-body p-4">
+        <div class="jp-confirm-icon"><i class="bi bi-check-circle-fill"></i></div>
+        <h4>Order received!</h4>
+        <p class="text-muted" id="confirmText">We've got your order and will confirm shortly.</p>
+        <div class="d-flex flex-column gap-2 mt-3">
+          <a id="confirmWhatsapp" class="btn btn-jp" target="_blank" rel="noopener"><i class="bi bi-whatsapp me-2"></i>Send to WhatsApp too</a>
+          <a id="confirmEmail" class="btn btn-outline-jp"><i class="bi bi-envelope me-2"></i>Send a copy by email</a>
+          <button class="btn btn-link text-muted" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- React (used for the live Order cart/form in #jpOrderRoot) -->
+<script src="https://cdn.jsdelivr.net/npm/react@18.3.1/umd/react.production.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/react-dom@18.3.1/umd/react-dom.production.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@babel/standalone@7.24.7/babel.min.js"></script>
+
+<script src="script.js"></script>
+<script type="text/babel" src="order-cart.jsx"></script>
+</body>
+</html>
